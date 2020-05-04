@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------
+ * 変数
+----------------------------------------------- */
+:root{
+	--f1: 2.44em; /* 39.04px */
+	--f2: 1.95em; /* 31.2px */
+	--f3: 1.56em; /* 24.96px */
+	--f4: 1.25em; /* 20px */
+	--f5: 1em;    /* 16px */
+	--f6: 0.8em;  /* 12.8px */
+	
+	--basecolor: #F0EAB6; /* 基本色 */
+
+	--editorNormalWidth: calc(1000px + 30px); /* エディターの標準の横幅 */
+
+	
+}
+
+/* -----------------------------------------------
+ * フォント
+----------------------------------------------- */
+body,
+.editor-post-title__input{ /* エディタのタイトルへのフォント適用 */
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+p{
+	line-height: 1.8;
+}
+h1{
+	font-size: var(--f1);
+}
+h2{
+	font-size: var(--f2);
+}
+h3{
+	font-size: var(--f3);
+}
+h4{
+	font-size: var(--f4);
+}
+h5{
+	font-size: var(--f5);
+}
+h6{
+	font-size: var(--f6);
+}
+
+
+
+/* -----------------------------------------------
+ * コンテンツの横幅
+ * スマホベースで作成
+ * PCのブレイクポイントは1030px, コンテンツはMax1000px
+----------------------------------------------- */
+.wp-block:not([data-align="full"]):not([data-align="wide"]){
+	max-width: var(--editorNormalWidth);
+}
+
+.wp-block[data-align="wide"]{
+	max-width: calc( var(--editorNormalWidth) + (100% - var(--editorNormalWidth)) / 2 );
+}
